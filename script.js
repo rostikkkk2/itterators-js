@@ -34,21 +34,27 @@ var todo_list = [
 ];
 
 function completed(arr_objs){
-  return arr_objs.filter(function(elem) {return elem.is_completed});
+  return arr_objs.filter(function(elem) {
+    return elem.is_completed;
+  });
 }
 
 function listWithLattice(arr_objs) {
-  return arr_objs.filter(function(elem) {return elem.title.indexOf("#") != -1}) ;
+  return arr_objs.filter(function(elem) {
+    return elem.title.indexOf("#") != -1
+  }) ;
 }
 
 function allSummQuantiti(arr_objs) {
   return arr_objs.reduce(function(sum, current) {
-  return sum + current.todo_quantity;
+    return sum + current.todo_quantity;
   }, 0);
 }
 
 function userIdDivideTen(arr_objs) {
-  return arr_objs.filter(function(elem) {return elem.user_id % 10 == 0});
+  return arr_objs.filter(function(elem) {
+    return elem.user_id % 10 == 0;
+  });
 }
 
 function addKeyNameAndSurname(arr_objs) {
@@ -58,8 +64,10 @@ function addKeyNameAndSurname(arr_objs) {
   });
 }
 
-function NotCompleted(arr_objs) {
-  return arr_objs.filter(function(elem) {return !elem.is_completed});
+function notCompleted(arr_objs) {
+  return arr_objs.filter(function(elem) {
+    return !elem.is_completed;
+  });
 }
 
 function isAndNotCompleted(arr_objs){
